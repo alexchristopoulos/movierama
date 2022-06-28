@@ -1,0 +1,13 @@
+.maindiv{
+    width: 100%;
+    min-height: 500px;
+    padding: 12px;
+}
+
+.side-btn{
+    width: 100%;
+}
+
+.published-span{
+    float: right;
+}

@@ -1,0 +1,5 @@
+backend/node_modules/
+frontend/node_modules/
+backend/logs
+frontend/dist
+*.d.ts

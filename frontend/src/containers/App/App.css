@@ -1,0 +1,67 @@
+.app {
+
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: rgb(235,255,235);
+}
+
+.side-menu-action{
+    margin: 4px;
+}
+
+.bi-hand-thumbs-up-fill{
+    color: green;
+    cursor: not-allowed;
+}
+
+.bi-hand-thumbs-up{
+    color: green;
+}
+
+.bi-hand-thumbs-down-fill{
+    color:crimson;
+    cursor: not-allowed;
+}
+
+.bi-hand-thumbs-down{
+    cursor: pointer;
+    color: crimson;
+}
+
+.bi-hand-thumbs-up:hover{
+    cursor: pointer;
+    color: cyan;
+}
+
+.bi-hand-thumbs-down:hover{
+    cursor: pointer;
+    color: cyan;
+}
+
+.col-card{
+    margin-bottom: 12px;
+}
+
+textarea {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align:justify;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }

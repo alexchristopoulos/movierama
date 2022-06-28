@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "78945a32-6fa8-44d1-af98-8d2802b417ef",
+		"name": "movierama",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Alex\",\r\n    \"lastname\": \"ABC\",\r\n    \"password\": \"123456!aA\",\r\n    \"email\": \"abcd123@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123456!aA\",\r\n    \"username\": \"abcd123@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticated",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdG5hbWUiOiJBbGV4IiwibGFzdG5hbWUiOiJBQkMiLCJlbWFpbCI6ImFiY2QxMjNAbWFpbC5jb20iLCJleHAiOjE2NTk2ODUwMTcsImlhdCI6MTY1NjA4NTAxNywiaXNzIjoibW92aWUtcmFtYS1iYWNrZW5kIn0.cuwE0qCP9A--fhhZoMRuwZKFu_tTZnGqJXnDt830iV8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user from token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdG5hbWUiOiJBbGV4IiwibGFzdG5hbWUiOiJBQkMiLCJlbWFpbCI6ImFiY2QxMjNAbWFpbC5jb20iLCJleHAiOjE2NTk2ODUwMTcsImlhdCI6MTY1NjA4NTAxNywiaXNzIjoibW92aWUtcmFtYS1iYWNrZW5kIn0.cuwE0qCP9A--fhhZoMRuwZKFu_tTZnGqJXnDt830iV8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/auth/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdG5hbWUiOiJBbGV4IiwibGFzdG5hbWUiOiJBQkMiLCJlbWFpbCI6ImFiY2QxMjNAbWFpbC5jb20iLCJleHAiOjE2NTk2ODUwMTcsImlhdCI6MTY1NjA4NTAxNywiaXNzIjoibW92aWUtcmFtYS1iYWNrZW5kIn0.cuwE0qCP9A--fhhZoMRuwZKFu_tTZnGqJXnDt830iV8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Uncharted\",\r\n    \"description\": \".Uncharted developed by sony .....\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movie",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdG5hbWUiOiJBbGV4IiwibGFzdG5hbWUiOiJBQkMiLCJlbWFpbCI6ImFiY2QxMjNAbWFpbC5jb20iLCJleHAiOjE2NTk2ODUwMTcsImlhdCI6MTY1NjA4NTAxNywiaXNzIjoibW92aWUtcmFtYS1iYWNrZW5kIn0.cuwE0qCP9A--fhhZoMRuwZKFu_tTZnGqJXnDt830iV8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/movie",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create movie opinion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdG5hbWUiOiJBbGV4IiwibGFzdG5hbWUiOiJBQkMiLCJlbWFpbCI6ImFiY2QxMjNAbWFpbC5jb20iLCJleHAiOjE2NTk2ODUwMTcsImlhdCI6MTY1NjA4NTAxNywiaXNzIjoibW92aWUtcmFtYS1iYWNrZW5kIn0.cuwE0qCP9A--fhhZoMRuwZKFu_tTZnGqJXnDt830iV8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"likes\": true,\r\n    \"movieId\": \"62b5da438f03b129e49ba787\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movie/opinion",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"opinion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get opitions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/movie/opinion",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"opinion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete opinion",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdG5hbWUiOiJBbGV4IiwibGFzdG5hbWUiOiJBQkMiLCJlbWFpbCI6ImFiY2QxMjNAbWFpbC5jb20iLCJleHAiOjE2NTk2ODUwMTcsImlhdCI6MTY1NjA4NTAxNywiaXNzIjoibW92aWUtcmFtYS1iYWNrZW5kIn0.cuwE0qCP9A--fhhZoMRuwZKFu_tTZnGqJXnDt830iV8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\": \"62b5da438f03b129e49ba787\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movie/opinion",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"opinion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

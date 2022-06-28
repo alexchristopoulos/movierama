@@ -1,0 +1,25 @@
+{
+  "name": "express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "SET NODE_ENV=DEV && nodemon ./bin/www export",
+    "prod": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-validator": "^6.14.2",
+    "jws": "^4.0.0",
+    "md5": "^2.3.0",
+    "mongoose": "^5.13.14",
+    "morgan": "~1.9.1",
+    "winston": "^3.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18",
+    "typescript": "^4.7.4"
+  }
+}
